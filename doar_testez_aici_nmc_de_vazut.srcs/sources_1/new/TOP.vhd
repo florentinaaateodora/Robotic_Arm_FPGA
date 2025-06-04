@@ -92,15 +92,55 @@ begin
     );
 
   
-  debounce_inst_btn_0_1: debounce_ff port map(clk => i_clk, noisy_in => i_btn_0, clean_out => r_btn_0_1);
-  debounce_inst_btn_0_2: debounce_ff port map(clk => i_clk, noisy_in => r_btn_0_1, clean_out => r_btn_0_2);
-  debounce_inst_btn_1_1: debounce_ff port map(clk => i_clk, noisy_in => i_btn_1, clean_out => r_btn_1_1);
-  debounce_inst_btn_1_2: debounce_ff port map(clk => i_clk, noisy_in => r_btn_1_1, clean_out => r_btn_1_2);
+  debounce_inst_btn_0_1: debounce_ff 
+    port map(
+      clk => i_clk,
+      noisy_in => i_btn_0, 
+      clean_out => r_btn_0_1);
+    
+  debounce_inst_btn_0_2: debounce_ff 
+    port map(
+      clk => i_clk,
+      noisy_in => r_btn_0_1, 
+      clean_out => r_btn_0_2);
+    
+  debounce_inst_btn_1_1: debounce_ff 
+    port map(
+      clk => i_clk,
+      noisy_in => i_btn_1, 
+      clean_out => r_btn_1_1);
+    
+  debounce_inst_btn_1_2: debounce_ff 
+    port map(
+      clk => i_clk, 
+      noisy_in => r_btn_1_1, 
+      clean_out => r_btn_1_2);
 
-  debounce_inst_sw_0_1 : debounce_ff port map(clk => i_clk, noisy_in => i_sw_0, clean_out => r_sw_0_1);
-  debounce_inst_sw_0_2 : debounce_ff port map(clk => i_clk, noisy_in => r_sw_0_1, clean_out => r_sw_0_2);
-  debounce_inst_sw_1_1 : debounce_ff port map(clk => i_clk, noisy_in => i_sw_1, clean_out => r_sw_1_1);
-  debounce_inst_sw_1_2 : debounce_ff port map(clk => i_clk, noisy_in => r_sw_1_1, clean_out => r_sw_1_2);
+
+    
+  debounce_inst_sw_0_1 : debounce_ff 
+    port map(
+      clk => i_clk, 
+      noisy_in => i_sw_0, 
+      clean_out => r_sw_0_1);
+    
+  debounce_inst_sw_0_2 : debounce_ff 
+    port map(
+      clk => i_clk, 
+      noisy_in => r_sw_0_1, 
+      clean_out => r_sw_0_2);
+    
+  debounce_inst_sw_1_1 : debounce_ff 
+    port map(
+      clk => i_clk, 
+      noisy_in => i_sw_1, 
+      clean_out => r_sw_1_1);
+    
+  debounce_inst_sw_1_2 : debounce_ff 
+    port map(
+      clk => i_clk, 
+      noisy_in => r_sw_1_1, 
+      clean_out => r_sw_1_2);
 
   
   r_sel <= r_sw_1_2 & r_sw_0_2;
