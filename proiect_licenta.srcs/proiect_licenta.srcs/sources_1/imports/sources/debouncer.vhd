@@ -3,9 +3,9 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity debounce_ff is
     Port (
-        clk       : in  std_logic;   -- System clock
-        noisy_in  : in  std_logic;   -- Raw button input
-        clean_out : out std_logic    -- Debounced output
+        clk       : in  std_logic;   
+        noisy_in  : in  std_logic;   
+        clean_out : out std_logic    
     );
 end debounce_ff;
 
@@ -22,6 +22,6 @@ begin
         end if;
     end process;
 
-    clean_out <= ff1 and ff2;  -- Output only when stable for two cycles
+    clean_out <= ff1 and ff2;  
 
 end Behavioral;
