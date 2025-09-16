@@ -9,17 +9,12 @@ entity pwm_generator is
     port (
         clk         : in  std_logic;
         rst         : in  std_logic;
-        pulse_width : in  integer range 125000 to 250000; -- in clock cycles (1ms-2ms)
+        pulse_width : in  integer range 125000 to 250000; --  clock cycles (1ms-2ms)
         pwm_out     : out std_logic
     );
 end pwm_generator;
 
 architecture Behavioral of pwm_generator is
-    -- You need to calculate the value to increment / decrement in order to move the PWM motors
-    -- 125000 = 1 ms PWM
-    -- 250000 = 2 ms PWM
-    -- By having the 2 values form above, you should be able to calculate the value to increment/ decrement for 1 degree
-    -- NOTE: These values depend of the clock frequency. Consult the code below for clarification.
     
     constant PERIOD_COUNT : integer := CLK_FREQ / 50;  -- 20 ms period
     signal counter        : integer range 0 to PERIOD_COUNT := 0;
