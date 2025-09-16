@@ -7,3 +7,6 @@ Implementarea a fost realizată pe placa de dezvoltare Pynq-Z2, utilizând mediu
 După integrarea sistemului hardware, au fost efectuate teste practice care au confirmat stabilitatea și precizia funcționării. Brațul robotic a reușit să manipuleze obiecte de până la 10 grame, executând mișcările comandate într-un mod stabil și controlat. S-a demonstrat astfel că prin utilizarea platformelor FPGA se pot obține soluții eficiente și fiabile pentru controlul sistemelor robotice.
 
 Rezultatele obținute validează funcționalitatea arhitecturii propuse și evidențiază potențialul extinderii sistemului către aplicații mai complexe, în care precizia, stabilitatea și siguranța operării reprezintă cerințe esențiale.
+
+
+[Braț artificial pentru manipularea obiectelor explozibile.pptx](https://github.com/user-attachments/files/22363913/Bra.artificial.pentru.manipularea.obiectelor.explozibile.pptx)
